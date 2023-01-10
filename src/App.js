@@ -11,6 +11,7 @@ function App() {
   const [winIdxs, setWinIdxs] = useState([]);
   const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
   const [gameOver, setGameOver] = useState(false);
+  let isWin = false;
 
   const handleClick = (boxIdx) => {
     if (gameOver) return;
@@ -24,7 +25,7 @@ function App() {
     setIsXNext(!isXNext);
 
     checkWinner(updatedBoard);
-    checkDraw(updatedBoard);
+    if (!isWin) checkDraw(updatedBoard);
   };
 
   const checkWinner = (board) => {
@@ -35,6 +36,7 @@ function App() {
         setWinner(board[a]);
         setWinIdxs([a, b, c]);
         addScore(board[a], scores);
+        isWin = true;
       }
     }
   };
