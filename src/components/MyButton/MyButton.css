@@ -2,13 +2,16 @@
   display: block;
   border: none;
   box-shadow: 0 0 5px #888888;
-  background-color: rgb(149, 0, 160, 0.7);
   margin: 2rem auto;
   padding: 1rem 2rem;
   border-radius: 10%;
   font-size: 1rem;
   font-weight: bold;
   transition: all 0.8s;
+  color: rgb(199, 197, 197);
+  text-shadow: 1px 1px 1px black;
+  background: rgb(211,0,0);
+  background: linear-gradient(90deg, rgba(211,0,0,1) 0%, rgba(114,9,121,1) 61%, rgba(0,42,169,1) 100%);
 }
 
 .resetBtn:hover {
